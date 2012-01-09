@@ -1,4 +1,4 @@
-﻿local E, L, DF = unpack(select(2, ...)); --Engine
+local E, L, DF = unpack(select(2, ...)); --Engine
 
 --Global defaults
 E.DF["global"] = {};
@@ -182,31 +182,31 @@ DF['datatexts'] = {
 	['panels'] = {
 		['spec1'] = {
 			['LeftChatDataPanel'] = {
-				['left'] = 'Armor',
-				['middle'] = 'Durability',
-				['right'] = 'Avoidance',
+				['left'] = L['Armor'],
+				['middle'] = L['Durability'],
+				['right'] = L['Avoidance'],
 			},
 			['RightChatDataPanel'] = {
-				['left'] = 'System',
-				['middle'] = 'Time',	
-				['right'] = 'Gold',
+				['left'] = L['System'],
+				['middle'] = L['Time'],	
+				['right'] = L['Gold'],
 			},
-			['LeftMiniPanel'] = 'Guild',
-			['RightMiniPanel'] = 'Friends',
+			['LeftMiniPanel'] = L['Guild'],
+			['RightMiniPanel'] = L['Friends'],
 		},
 		['spec2'] = {
 			['LeftChatDataPanel'] = {
-				['left'] = 'Crit Chance',
-				['middle'] = 'Durability',
-				['right'] = 'Attack Power',
+				['left'] = L['Crit Chance'],
+				['middle'] = L['Durability'],
+				['right'] = L['Attack Power'],
 			},
 			['RightChatDataPanel'] = {
-				['left'] = 'System',
-				['middle'] = 'Time',	
-				['right'] = 'Gold',
+				['left'] = L['System'],
+				['middle'] = L['Time'],	
+				['right'] = L['Gold'],
 			},
-			['LeftMiniPanel'] = 'Guild',
-			['RightMiniPanel'] = 'Friends',	
+			['LeftMiniPanel'] = L['Guild'],
+			['RightMiniPanel'] = L['Friends'],	
 		},
 	},
 	['localtime'] = true,
