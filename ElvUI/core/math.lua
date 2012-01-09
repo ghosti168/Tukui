@@ -2,10 +2,12 @@ local E, L, DF = unpack(select(2, ...)); --Engine
 
 --Return short value of a number
 function E:ShortValue(v)
-	if v >= 1e6 then
-		return ("%.1fm"):format(v / 1e6):gsub("%.?0+([km])$", "%1")
+	if v >= 1e8 then
+		return ("%.1f億"):format(v / 1e8):gsub("%.?0+([km])$", "%1")
+	elseif v >= 1e4 or v <= -1e4 then
+		return ("%.1f萬"):format(v / 1e4):gsub("%.?0+([km])$", "%1")
 	elseif v >= 1e3 or v <= -1e3 then
-		return ("%.1fk"):format(v / 1e3):gsub("%.?0+([km])$", "%1")
+		return ("%.1fK"):format(v / 1e3):gsub("%.?0+([km])$", "%1")
 	else
 		return v
 	end
@@ -31,11 +33,14 @@ end
 --Return short negative value of a number, example -1000 returned as string -1k
 function E:ShortValueNegative(v)
 	if v <= 999 then return v end
-	if v >= 1000000 then
-		local value = string.format("%.1fm", v/1000000)
+	if v >= 100000000 then
+		local value = string.format("%.1f億", v/100000000)
+		return value
+	elseif v >= 10000 then
+		local value = string.format("%.1f萬", v/10000)
 		return value
 	elseif v >= 1000 then
-		local value = string.format("%.1fk", v/1000)
+		local value = string.format("%.1fK", v/1000)
 		return value
 	end
 end
