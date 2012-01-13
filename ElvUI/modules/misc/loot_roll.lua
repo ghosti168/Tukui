@@ -10,41 +10,50 @@ local FRAME_WIDTH, FRAME_HEIGHT = 328, 28
 local locale = GetLocale()
 local rollpairs = locale == "deDE" and {
 	["(.*) passt automatisch bei (.+), weil [ersi]+ den Gegenstand nicht benutzen kann.$"]  = "pass",
-	["(.*) würfelt nicht für: (.+|r)$"] = "pass",
-	["(.*) hat für (.+) 'Gier' ausgewählt"] = "greed",
-	["(.*) hat für (.+) 'Bedarf' ausgewählt"] = "need",
-	["(.*) hat für '(.+)' Entzauberung gewählt."]  = "disenchant",
+	["(.*) w黵felt nicht f黵: (.+|r)$"] = "pass",
+	["(.*) hat f黵 (.+) 'Gier' ausgew鋒lt"] = "greed",
+	["(.*) hat f黵 (.+) 'Bedarf' ausgew鋒lt"] = "need",
+	["(.*) hat f黵 '(.+)' Entzauberung gew鋒lt."]  = "disenchant",
 } or locale == "frFR" and {
-	["(.*) a passé pour : (.+) parce qu'((il)|(elle)) ne peut pas ramasser cette objet.$"]  = "pass",
-	["(.*) a passé pour : (.+)"]  = "pass",
-	["(.*) a choisi Cupidité pour : (.+)"] = "greed",
-	["(.*) a choisi Besoin pour : (.+)"]  = "need",
-	["(.*) a choisi Désenchantement pour : (.+)"]  = "disenchant",
+	["(.*) a pass?pour? (.+) parce qu'((il)|(elle)) ne peut pas ramasser cette objet.$"]  = "pass",
+	["(.*) a pass?pour? (.+)"]  = "pass",
+	["(.*) a choisi Cupidit?pour? (.+)"] = "greed",
+	["(.*) a choisi Besoin pour? (.+)"]  = "need",
+	["(.*) a choisi D閟enchantement pour? (.+)"]  = "disenchant",
 } or locale == "zhTW" and {
-	["(.*)自動放棄:(.+)，因為他無法拾取該物品$"]  = "pass",
+	["(.*)自動放棄:(.+)，因為他無法使用這項物品。$"]  = "pass",
+	["(.*)自動放棄:(.+)，因為她無法使用這項物品。$"]  = "pass",
+	["(.*)自動放棄:(.+)，因為你無法使用這項物品。$"]  = "pass",
 	["(.*)放棄了:(.+)"] = "pass",
 	["(.*)選擇了貪婪:(.+)"] = "greed",
 	["(.*)選擇了需求:(.+)"] = "need",
-	["(.*)選擇了分解:(.+)"] = "disenchant",
+	["(.*)選擇了分解:(.+)"] = "disenchant",	
+} or locale == "zhCN" and {
+	["(.*)自动放弃了(.+)，因为他无法拾取该物品。$"]  = "pass",
+	["(.*)自动放弃了(.+)，因为她无法拾取该物品。$"]  = "pass",
+	["(.*)放弃了：(.+)"] = "pass",
+	["(.*)选择了贪婪取向：(.+)"] = "greed",
+	["(.*)选择了需求取向：(.+)"] = "need",
+	["(.*)选择了分解取向：(.+)"] = "disenchant",	
 } or locale == "ruRU" and {
-	["(.*) автоматически передает предмет (.+), поскольку не может его забрать"] = "pass",
-	["(.*) пропускает розыгрыш предмета \"(.+)\", поскольку не может его забрать"] = "pass",
-	["(.*) отказывается от предмета (.+)%."]  = "pass",
-	["Разыгрывается: (.+)%. (.*): \"Не откажусь\""] = "greed",
-	["Разыгрывается: (.+)%. (.*): \"Мне это нужно\""] = "need",
-	["Разыгрывается: (.+)%. (.*): \"Распылить\""] = "disenchant",
+	["(.*) ????????????? ???????? ??????? (.+), ????????? ?? ????? ??? ???????"] = "pass",
+	["(.*) ?????????? ???????? ???????? \"(.+)\", ????????? ?? ????? ??? ???????"] = "pass",
+	["(.*) ???????????? ?? ???????? (.+)%."]  = "pass",
+	["?????????????: (.+)%. (.*): \"?? ????????\""] = "greed",
+	["?????????????: (.+)%. (.*): \"??? ??? ?????\""] = "need",
+	["?????????????: (.+)%. (.*): \"?????????\""] = "disenchant",
 } or locale == "koKR" and {
-       ["(.+)님이 획득할 수 없는 아이템이어서 자동으로 주사위 굴리기를 포기했습니다: (.+)"] = "pass",
-       ["(.+)님이 주사위 굴리기를 포기했습니다: (.+)"] = "pass",
-       ["(.+)님이 차비를 선택했습니다: (.+)"] = "greed",
-       ["(.+)님이 입찰을 선택했습니다: (.+)"] = "need",
-       ["(.+)님이 마력 추출을 선택했습니다: (.+)"] = "disenchant",	
+       ["(.+)?? ??? ? ?? ?????? ???? ??? ???? ??????: (.+)"] = "pass",
+       ["(.+)?? ??? ???? ??????: (.+)"] = "pass",
+       ["(.+)?? ??? ??????: (.+)"] = "greed",
+       ["(.+)?? ??? ??????: (.+)"] = "need",
+       ["(.+)?? ?? ??? ??????: (.+)"] = "disenchant",	
 } or locale == "esES" or locale == "esMX" and {
 	["^(.*) pasó automáticamente de: (.+) porque no puede despojar este objeto.$"] = "pass",
 	["^(.*) pasó de: (.+|r)$"]  = "pass",
 	["(.*) eligió Codicia para: (.+)"] = "greed",
 	["(.*) eligió Necesidad para: (.+)"]  = "need",
-	["(.*) eligió Desencantar para: (.+)"]  = "disenchant",	   
+	["(.*) eligió Desencantar para: (.+)"]  = "disenchant",	 	   
 } or {
 	["^(.*) automatically passed on: (.+) because s?he cannot loot that item.$"] = "pass",
 	["^(.*) passed on: (.+|r)$"]  = "pass",
@@ -310,7 +319,7 @@ function M:CHAT_MSG_LOOT(event, msg)
 	end
 end
 
-function M:LoadLootRoll()	
+function M:LoadLootRoll()
 	if not E.db.core.lootRoll then return end
 	anchor = CreateFrame("Frame", nil, anchorHolder)
 	anchor:Point('TOP', E.UIParent, 'TOP', 0, -200)
@@ -321,7 +330,7 @@ function M:LoadLootRoll()
 	UIParent:UnregisterEvent("START_LOOT_ROLL")
 	UIParent:UnregisterEvent("CANCEL_LOOT_ROLL")
 	
-	E:CreateMover(anchor, "LootRollMover", "LootRoll Frame", nil, PostMoveLootRoll)
+	E:CreateMover(anchor, "LootRollMover", L["LootRoll Frame"], nil, PostMoveLootRoll)
 	
 	local f = self:CreateRollFrame() -- Create one for good measure
 	f:Point("TOPLEFT", next(frames) and frames[#frames] or anchor, "BOTTOMLEFT", 0, -4)
