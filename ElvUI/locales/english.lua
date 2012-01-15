@@ -1,4 +1,4 @@
-﻿-- English localization file for enUS and enGB.
+-- English localization file for enUS and enGB.
 local AceLocale = LibStub:GetLibrary("AceLocale-3.0");
 local L 
 if UnitName('player') ~= 'Elv' then
@@ -193,6 +193,11 @@ do
 	L['Good Scale'] = true;
 	L['Bad Scale'] = true;
 	L["Auras"] = true;
+	L['Healer Icon'] = true;
+	L['Display a healer icon over known healers inside battlegrounds.'] = true;
+	L['Restoration'] = true;
+	L['Holy'] = true;
+	L['Discipline'] = true;
 end
 
 --ClassTimers
@@ -526,6 +531,9 @@ do
 	L['Show a incomming heal prediction bar on the unitframe. Also display a slightly different colored bar for incoming overheals.'] = true;
 	L['Assist Frames'] = true;
 	L['Tank Frames'] = true;
+	
+	L['Display Pets'] = true;
+	L['Display group members pets above the unitframe.'] = true;
 end
 
 --Datatext
