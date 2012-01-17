@@ -20,14 +20,14 @@ do
 	L["Enable"] = "啟用";
 
 	L["General"] = "一般設定";
-	L["ELVUI_DESC"] = "ElvUI 是一個用來替換WOW原始介面的輔助UI";
+	L["ELVUI_DESC"] = "ElvUI 為一套功能完整，可用來替換 WOW 原始介面的套件";
 	L["Auto Scale"] = "自動縮放";
-		L["Automatically scale the User Interface based on your screen resolution"] = "依解析度自動縮放UI";
+		L["Automatically scale the User Interface based on your screen resolution"] = "依解析度自動縮放介面";
 	L["Scale"] = "縮放比例";
 		L["Controls the scaling of the entire User Interface"] = "調整UI縮放比例";
 	L["None"] = "無";
 	L["You don't have permission to mark targets."] = "你沒有標記目標的權限";
-	L['LOGIN_MSG'] = '歡迎使用 %sElvUI|r 版本 %s%s|r, 輸入 /ec 進入設定介面. 如需技術支援, 請至 http://www.tukui.org/forums/forum.php?id=84';
+	L['LOGIN_MSG'] = '歡迎使用 %sElvUI|r 版本 %s%s|r，輸入 /ec 進入設定介面。如需技術支援，請至 http://www.tukui.org/forums/forum.php?id=84';
 	L['Login Message'] = "登入資訊";
 
 	L["Reset Anchors"] = "重設位置";
@@ -99,9 +99,9 @@ do
 	L['Melee DPS'] = "物理輸出";
 	L['Caster DPS'] = "法系輸出";
 	L["Primary Layout"] = "主要天賦版面";
-	L["Secondary Layout"] = "次要天賦版面";
+	L["Secondary Layout"] = "第二天賦版面";
 	L["Primary Layout Set"] = "主要天賦版面設定";
-	L["Secondary Layout Set"] = "次要天賦版面設定";
+	L["Secondary Layout Set"] = "第二天賦版面設定";
 	L["You can now choose what layout you wish to use for your primary talents."] = "請選擇主要天賦想使用的版面配置.";
 	L["You can now choose what layout you wish to use for your secondary talents."] = "請選擇第二天賦想使用的版面配置.";
 	L["This will change the layout of your unitframes, raidframes, and datatexts."] = "此設定將變更單位框架、團隊框架、資訊文字等的版面配置.";
@@ -185,17 +185,17 @@ do
 	L['Add Name'] = "增加篩選名";
 	L['Remove Name'] = "刪除篩選名";
 	L['Use this filter.'] = "使用篩選器";
-	L["You can't remove a default name from the filter, disabling the name."] = "你不能刪除篩選器的預設篩選名, 僅能禁用此篩選名";
+	L["You can't remove a default name from the filter, disabling the name."] = "你不能刪除篩選器的預設篩選名, 僅能停用此篩選名";
 	L['Hide'] = "隱藏";
 		L['Prevent any nameplate with this unit name from showing.'] = "不顯示特定目標的血條";
 	L['Custom Color'] = "定制顏色";
-		L['Disable threat coloring for this plate and use the custom color.'] = "對特定的目標禁用仇恨顏色,並使用定制顏色";
+		L['Disable threat coloring for this plate and use the custom color.'] = "對特定的目標停用仇恨顏色,並使用定制顏色";
 	L['Custom Scale'] = "自定大小比例";
 		L['Set the scale of the nameplate.'] = "設定血條的縮放比例";
 	L['Good Scale'] = "安全的比例";
 	L['Bad Scale'] = "危險的比例";
 	L["Auras"] = "光環";
-	L['Healer Icon'] = "補師圖示";
+	L['Healer Icon'] = "補職圖示";
 	L['Display a healer icon over known healers inside battlegrounds.'] = "顯示戰場內已知治療師的補師圖示";
 	L['Restoration'] = "恢復";
 	L['Holy'] = "神聖";
@@ -208,7 +208,7 @@ do
 	L["CLASSTIMER_DESC"] = '在玩家和目標單位上顯示 buff/debuff 資訊.\n建議不要和技能監視同時開啟.';
 
 	L['Player Anchor'] = "玩家定位";
-	L['What frame to anchor the class timer bars to.'] = "職業計時條依附的視窗.";
+	L['What frame to anchor the class timer bars to.'] = "職業計時條依附的框架.";
 	L['Target Anchor'] = "目標定位";
 	L['Trinket Anchor'] = "飾品定位";
 	L['Player Buffs'] = "玩家增益光環";
@@ -223,12 +223,12 @@ do
 	L['Unit Type'] = "單位類型";
 	L["Buff Color"] = "增益光環顏色";
 	L["Debuff Color"] = "減益光環顏色";
-	L['Attempting to position a frame to a frame that is dependant, try another anchor point.'] = "嘗試定位的視窗與另一視窗是從屬關係, 嘗試其他的定位點";
+	L['You have attempted to anchor a classtimer frame to a frame that is dependant on this classtimer frame, try changing your anchors again.'] = "嘗試使用的依附框架為此職業計時條框架的子框架，請變更為定位端，然後再試一次。";
 	L['Remove Color'] = "移除顏色";
 	L['Reset color back to the bar default.'] = "重設為預設顏色";
 	L['Add SpellID'] = "增加技能ID";
 	L['Remove SpellID'] = "刪除技能ID";
-	L['You cannot remove a spell that is default, disabling the spell for you however.'] = "你不能刪除預設的技能, 僅能禁用它";
+	L['You cannot remove a spell that is default, disabling the spell for you however.'] = "你不能刪除預設的技能, 僅能停用它";
 	L['Spell already exists in filter.'] = "技能在篩選器中已經存在";
 	L['Spell not found.'] = "未找到此技能.";
 	L["All"] = "所有人";
@@ -238,7 +238,7 @@ end
 
 --ACTIONBARS 快捷列
 do
-	--HOTKEY TEXTS 熱鍵文本
+	--HOTKEY TEXTS 快捷鍵文字
 	L['KEY_SHIFT'] = 'S';
 	L['KEY_ALT'] = 'A';
 	L['KEY_CTRL'] = 'C';
@@ -273,10 +273,10 @@ do
 	L["ActionBars"] = "快捷列";
 		L["Keybind Mode"] = "快捷鍵綁定模式";
 
-	L['Macro Text'] = "巨集名字";
-		L['Display macro names on action buttons.'] = "在快捷列按鈕上顯示巨集名字";
+	L['Macro Text'] = "巨集名稱";
+		L['Display macro names on action buttons.'] = "在快捷列按鈕上顯示巨集名稱";
 	L['Keybind Text'] = "快捷鍵";
-		L['Display bind names on action buttons.'] = "在快捷列按鈕上顯示快捷鍵名字";
+		L['Display bind names on action buttons.'] = "在快捷列按鈕上顯示快捷鍵名稱";
 	L['Button Size'] = "按鈕大小";
 		L['The size of the main action buttons.'] = "主快捷列按鈕大小";
 	L['Button Spacing'] = "按鈕間距";
@@ -309,9 +309,9 @@ do
 	L['Cooldown Text'] = "冷卻文字";
 		L['Display cooldown text on anything with the cooldown spiril.'] = "顯示技能冷卻時間";
 	L['Low Threshold'] = "冷卻時間低閥值";
-		L['Threshold before text turns red and is in decimal form. Set to -1 for it to never turn red'] = "低於此門檻的時候將轉為紅色並顯示小數. 設為 -1 則不會變為紅色";
-	L['Expiring'] = "到期";
-		L['Color when the text is about to expire'] = "即將到期的文字顏色";
+		L['Threshold before text turns red and is in decimal form. Set to -1 for it to never turn red'] = "冷卻時間低於此秒數後將變為紅色數字，並以小數顯示，設為 -1 冷卻時間將不會變為紅色";
+	L['Expiring'] = "即將冷卻完畢";
+		L['Color when the text is about to expire'] = "即將冷卻完畢的數字顏色";
 	L['Seconds'] = "秒";
 		L['Color when the text is in the seconds format.'] = "以秒顯示的文字顏色";
 	L['Minutes'] = "分";
@@ -325,17 +325,17 @@ end
 
 --UNITFRAMES 單位框架
 do
-	L['Current / Max'] = "目前 / 最大";
-	L['Current'] = "目前";
-	L['Remaining'] = "剩餘";
+	L['Current / Max'] = "目前/最大生命值";
+	L['Current'] = "目前生命值";
+	L['Remaining'] = "剩餘生命值";
 	L['Format'] = "格式";
 	L['X Offset'] = "X軸偏移";
 	L['Y Offset'] = "Y軸偏移";
-	L['RaidDebuff Indicator'] = "團隊副本Debuff指示器";
-	L['Debuff Highlighting'] = "Debuff 高亮";
-		L['Color the unit healthbar if there is a debuff that can be dispelled by you.'] = "如果Debuff能被你驅散, 高亮度顯示生命條";
-	L['Disable Blizzard'] = "禁用Blizzard內建UI";
-		L['Disables the blizzard party/raid frames.'] = "禁用Blizzard內建的小隊/團隊視窗";
+	L['RaidDebuff Indicator'] = "團隊副本減益光環標示";
+	L['Debuff Highlighting'] = "減益光環加亮顯示";
+		L['Color the unit healthbar if there is a debuff that can be dispelled by you.'] = "如果單位目標的減益光環可被驅散，加亮顯示其生命值。";
+	L['Disable Blizzard'] = "停用Blizzard內建UI";
+		L['Disables the blizzard party/raid frames.'] = "停用Blizzard內建的隊伍/團隊框架";
 	L['OOR Alpha'] = "超出距離透明度";
 		L['The alpha to set units that are out of range to.'] = "單位框架超出距離的透明度";
 	L['You cannot set the Group Point and Column Point so they are opposite of each other.'] = "你不能設定隊伍位置和列位置這些他們是互相對立的.";
@@ -356,15 +356,15 @@ do
 		L["Set the font outline."] = "設定字體的描邊";
 	L['Bars'] = "條";
 	L['Fonts'] = "字體";
-	L['Class Health'] = "生命條職業化";
+	L['Class Health'] = "生命條職業色";
 		L['Color health by classcolor or reaction.'] = "以職業色顯示生命";
-	L['Class Power'] = "能量條職業化";
+	L['Class Power'] = "能量條職業色";
 		L['Color power by classcolor or reaction.'] = "以職業色顯示能量";
 	L['Health By Value'] = "生命條顏色依數值變化";
 		L['Color health by ammount remaining.'] = "按數值變化血量顏色";
 	L['Custom Health Backdrop'] = "自訂生命條背景";
 		L['Use the custom health backdrop color instead of a multiple of the main health color.'] = "自定義生命條背景色";
-	L['Class Backdrop'] = "背景色職業化";
+	L['Class Backdrop'] = "生命條背景職業色";
 		L['Color the health backdrop by class or reaction.'] = "生命條背景色以職業色顯示";
 	L['Health'] = "生命條";
 	L['Health Backdrop'] = "生命條背景";
@@ -378,8 +378,8 @@ do
 	L['Player Frame'] = "玩家框架";
 	L['Width'] = "寬";
 	L['Height'] = "高";
-	L['Low Mana Threshold'] = "法力低落門檻";
-		L['When you mana falls below this point, text will flash on the player frame.'] = "當你的法力低於此門檻,將在玩家單位上顯示一行閃爍的文字";
+	L['Low Mana Threshold'] = "低法力閾值";
+		L['When you mana falls below this point, text will flash on the player frame.'] = "當法力低於此值時，將在玩家框架中閃爍顯示警告文字。";
 	L['Combat Fade'] = "戰鬥隱藏";
 		L['Fade the unitframe when out of combat, not casting, no target exists.'] = "非戰鬥/施法/目標不存在時隱藏單位框架";
 	L['Health'] = "生命條";
@@ -394,7 +394,7 @@ do
 	L['Spaced'] = "留空";
 	L['Power'] = "能量";
 	L['Offset'] = "偏移";
-		L['Offset of the powerbar to the healthbar, set to 0 to disable.'] = "偏移能量條與生命條的位置, 設為 0代表禁用.";
+		L['Offset of the powerbar to the healthbar, set to 0 to disable.'] = "偏移能量條與生命條的位置, 設為 0代表停用.";
 	L['Alt-Power'] = "特殊能量值";
 	L['Overlay'] = "覆蓋";
 		L['Overlay the healthbar']= "覆蓋生命條";
@@ -440,19 +440,19 @@ do
 	L['Whitelist'] = "白名單";
 	L['Blacklist'] = "黑名單";
 	L['Filter Type'] = "篩選器類型";
-		L['Set the filter type, blacklisted filters hide any aura on the like and show all else, whitelisted filters show any aura on the filter and hide all else.'] = "設定篩選器類型, 黑名單會隱藏名單裏面的光環, 白名字則顯示名單裏的光環";
+		L['Set the filter type, blacklisted filters hide any aura on the like and show all else, whitelisted filters show any aura on the filter and hide all else.'] = "設定篩選器類型, 黑名單會隱藏名單裏面的光環, 白名單則顯示名單裏的光環";
 	L['Add Spell'] = "添加技能";
 		L['Add a spell to the filter.'] = "添加一個技能到篩選器";
 	L['Remove Spell'] = "移除技能";
 		L['Remove a spell from the filter.'] = "從篩選器中移除一個技能";
-	L['You may not remove a spell from a default filter that is not customly added. Setting spell to false instead.'] = "你不能移除一個內建技能, 僅能禁用此技能.";
+	L['You may not remove a spell from a default filter that is not customly added. Setting spell to false instead.'] = "你不能移除一個內建技能, 僅能停用此技能.";
 	L['Unit Reaction'] = "單位聲望";
 		L['This filter only works for units with the set reaction.'] = "此篩選器只工作在那些單位有聲望時";
 		L['All'] = "全部";
 		L['Friend'] = "友好";
 		L['Enemy'] = "敵對";
 	L['Duration Limit'] = "時間限制";
-		L['The aura must be below this duration for the buff to show, set to 0 to disable. Note: This is in seconds.'] = "光環剩餘時間必需低於此時間才會顯示, 設為0禁用. 注意:此時間單位為秒.";
+		L['The aura must be below this duration for the buff to show, set to 0 to disable. Note: This is in seconds.'] = "光環剩餘時間必需低於此時間才會顯示, 設為0停用. 注意:此時間單位為秒.";
 	L['TargetTarget Frame'] = "目標的目標框架";
 	L['Attach To'] = "附加到";
 		L['What to attach the buff anchor frame to.'] = "buff 定位附加到哪兒";
@@ -470,8 +470,8 @@ do
 	L['New Profile'] = "新設定檔";
 	L['Delete Profile'] = "刪除設定檔";
 	L['Copy From'] = "複製自";
-	L['Talent Spec #1'] = "天賦位 #1";
-	L['Talent Spec #2'] = "天賦位 #2";
+	L['Talent Spec #1'] = "天賦 #1";
+	L['Talent Spec #2'] = "天賦 #2";
 	L['NEW_PROFILE_DESC'] = '你能創造一個新的單位框架設定檔, 你能分配某些設定檔為某個天賦使用. 在這兒你能刪除, 複製或重置設定檔.';
 	L["Delete a profile, doing this will permanently remove the profile from this character's settings."] = "刪除一個設定檔, 將永遠的從角色設定中移除此設定檔.";
 	L["Copy a profile, you can copy the settings from a selected profile to the currently active profile."] = "複製一個設定檔, 你能從選擇的設定檔複製設定到目前啟用設定檔.";
@@ -509,17 +509,17 @@ do
 	L['Color Icons'] = "圖示顏色";
 		L['Color the icon to their set color in the filters section, otherwise use the icon texture.'] = "以色塊顯示圖示, 否則使用圖示自身的材質";
 	L['Size'] = "大小";
-		L['Size of the indicator icon.'] = "指示器圖示大小";
+		L['Size of the indicator icon.'] = "提示圖示大小";
 	L["Select Spell"] = "選擇技能";
 	L['Add SpellID'] = "添加技能ID";
 	L['Remove SpellID'] = "移除技能ID";
 	L["Not valid spell id"] = "不正確的技能ID";
 	L["Spell not found in list."] = "列表中未發現技能";
 	L['Show Missing'] = "顯示未命中";
-	L['Any Unit'] = "任意單位";
+	L['Any Unit'] = "所有單位";
 	L['Move UnitFrames'] = "移動單位框架";
 	L['Reset Positions'] = "重設位置";
-	L['Sticky Frames'] = "粘性窗口";
+	L['Sticky Frames'] = "框架依附";
 	L['Raid625 Frames'] = "25人團隊";
 	L['Raid2640 Frames'] = "40人團隊";
 	L['Copy From'] = "複製自";
@@ -543,7 +543,7 @@ do
 	L['Bandwidth'] = "頻寬";
 	L['Download'] = "下載";
 	L['Total Memory:'] = "總記憶體:";
-	L['Home Latency:'] = "本地延遲:";
+	L['Home Latency:'] = "本機延遲:";
 
 	L.goldabbrev = "|cffffd700g|r"
 	L.silverabbrev = "|cffc7c7cfs|r"
@@ -561,13 +561,13 @@ do
 	L["Profit:"	] = "利潤:";
 
 	L["DataTexts"] = "資訊文字";
-	L["DATATEXT_DESC"] = "設定在螢幕上顯示的一些資訊文字.";
-	L["Multi-Spec Swap"] = "多天賦切換";
-	L['Swap to an alternative layout when changing talent specs. If turned off only the spec #1 layout will be used.'] = '當改變天賦時切換到另一個配置. 當關閉時只有 #1 配置被使用.';
+	L["DATATEXT_DESC"] = "設定螢幕所顯示的部份資訊文字.";
+	L["Multi-Spec Swap"] = "天賦切換";
+	L['Swap to an alternative layout when changing talent specs. If turned off only the spec #1 layout will be used.'] = '切換天賦時，同時切換版面設置。關閉此功能時，僅將使用天賦 #1 的版面設置.';
 	L['24-Hour Time'] = "24小時制";
 	L['Toggle 24-hour mode for the time datatext.'] = "切換時間顯示為24小時制.";
 	L['Local Time'] = "本地時間";
-	L['If not set to true then the server time will be displayed instead.'] = "若禁用, 將顯示伺服器時間";
+	L['If not set to true then the server time will be displayed instead.'] = "若關閉此選項將顯示伺服器時間.";
 	L['Primary Talents'] = "主要天賦";
 	L['Secondary Talents'] = "第二天賦";
 	L['left'] = '左';
@@ -610,8 +610,8 @@ do
 	L['Targeted By:'] = "同目標的有:";
 	L['Tooltip'] = "浮動提示";
 	L['Count'] = "計數";
-	L['Anchor Mode'] = "位置模式";
-	L['Set the type of anchor mode the tooltip should use.'] = "設定浮動提示定位類型";
+	L['Anchor Mode'] = "定位模式";
+	L['Set the type of anchor mode the tooltip should use.'] = "設定浮動提示定位模式";
 	L['Smart'] = "智能模式";
 	L['Cursor'] = "游標跟隨";
 	L['Anchor'] = "固定位置";
@@ -634,7 +634,7 @@ do
 	L['BGL'] = "戰場隊長";
 	L['G'] = "公會";
 	L['O'] = "幹部";
-	L['P'] = "小隊";
+	L['P'] = "隊伍";
 	L['PG'] = "隊員";
 	L['PL'] = "隊長";
 	L['R'] = "團隊";
@@ -653,17 +653,17 @@ do
 	L["SKINS_DESC"] = '調整外觀設定.';
 	L['Spacing'] = "間距";
 	L['The spacing in between bars.'] = "兩列之間的間距";
-	L["TOGGLESKIN_DESC"] = "啟用/禁用此外觀.";
+	L["TOGGLESKIN_DESC"] = "啟用/停用此外觀.";
 	L["Encounter Journal"] = "地城導覽";
 	L["Bags"] = "背包";
 	L["Reforge Frame"] = "重鑄";
-	L["Calendar Frame"] = "日曆";
+	L["Calendar Frame"] = "行事曆";
 	L["Achievement Frame"] = "成就";
 	L["LF Guild Frame"] = "尋求公會";
 	L["Inspect Frame"] = "觀察";
 	L["KeyBinding Frame"] = "快捷鍵";
 	L["Guild Bank"] = "公會銀行";
-	L["Archaeology Frame"] = "考古";
+	L["Archaeology Frame"] = "考古學";
 	L["Guild Control Frame"] = "公會控制";
 	L["Guild Frame"] = "公會";
 	L["TradeSkill Frame"] = "專業技能";
@@ -688,7 +688,7 @@ do
 	L["Taxi Frame"] = "載具";
 	L["LFD Frame"] = "尋求組隊";
 	L["Quest Frames"] = "任務";
-	L["Petition Frame"] = "請願(找GM)";
+	L["Petition Frame"] = "回報GM";
 	L["Dressing Room"] = "試衣間";
 	L["PvP Frames"] = "PvP框架";
 	L["Non-Raid Frame"] = "非團隊框架";
@@ -696,7 +696,7 @@ do
 	L["Spellbook"] = "技能書";
 	L["Character Frame"] = "角色";
 	L["LFR Frame"] = "尋求團隊";
-	L["Misc Frames"] = "其它視窗";
+	L["Misc Frames"] = "其他";
 	L["Tabard Frame"] = "外袍";
 	L["Guild Registrar"] = "公會註冊";
 	L["Time Manager"] = "時間管理";
@@ -749,7 +749,7 @@ do
 	L['Purchase'] = "購買";
 	L["Can't buy anymore slots!"] = "銀行背包欄位已達最大值";
 	L['You must purchase a bank slot first!'] = "你必需購買一個銀行背包欄位";
-	L['Enable\Disable the all-in-one bag.'] = "啟用\禁用整合包";
+	L['Enable\Disable the all-in-one bag.'] = "啟用\停用整合包";
 end
 
 --Datatext add 資料文字選單
