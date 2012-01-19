@@ -1,4 +1,4 @@
-﻿-- English localization file for enUS and enGB.
+-- English localization file for enUS and enGB.
 local AceLocale = LibStub:GetLibrary("AceLocale-3.0");
 local L 
 if UnitName('player') ~= 'Elv' then
@@ -751,4 +751,26 @@ do
 	L["Can't buy anymore slots!"] = true;
 	L['You must purchase a bank slot first!'] = true;
 	L['Enable\Disable the all-in-one bag.'] = true;
+end
+
+--Datatext add
+do
+	L['Armor'] = true;
+	L['Attack Power'] = true;
+	L['Avoidance'] = true;
+	L['Bags'] = true;
+	L['Call to Arms'] = true;
+	L['Crit Chance'] = true;
+	L['Durability'] = true;
+	L['Expertise'] = true;
+	L['Gold'] = true;
+	L['Guild'] = true;
+	L['Haste'] = true;
+	L['Hit Rating'] = true;
+	L['Mastery'] = true;
+	L['Mana Regen'] = true;
+	L['Spec Switch'] = true;
+	L['Spell/Heal Power'] = true;
+	L['System'] = true;
+	L['Time'] = true;
 end
